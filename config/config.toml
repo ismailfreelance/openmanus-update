@@ -104,10 +104,10 @@ use_data_analysis_agent = false
 ############################################
 # OPTIONAL: SEARCH CONFIG (DISABLED)
 ############################################
-# [search]
-# engine = "DuckDuckGo"
-# lang = "en"
-# country = "us"
+[search]
+engine = "DuckDuckGo"
+lang = "en"
+country = "us"
 [daytona]
 enabled = false
 daytona_api_key = ""
