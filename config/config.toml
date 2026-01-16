@@ -4,9 +4,9 @@
 
 [llm]
 api_type = "openai"
-model = "xiaomi/mimo-v2-flash:free"
+model = "nvidia/nemotron-3-nano-30b-a3b:free"
 base_url = "https://openrouter.ai/api/v1"
-api_key = "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"
+api_key = "key..."
 max_tokens = 4000
 temperature = 0.0
 
@@ -20,23 +20,23 @@ temperature = 0.0
 
 # Primary (fast, but rate-limited)
 [llm.primary]
-model = "whisper-large-v3-turbo"  # chat model; whisper is not chat
+model = "llama-3.3-70b-versatile"
 base_url = "https://api.groq.com/openai/v1"
-api_key = "gsk_vPgSKVOaiUJseJwv9wj1WGdyb3FYz4yK0EQ5QntxdCc8oyv4Vhxhf"
+api_key = "ahhhh"
 max_tokens = 4000
 temperature = 0.0
 # Backup (slower, but unlimited)
 [llm.backup]
-model = "whisper-large-v3"
+model = "llama-3.1-70b-versatile"
 base_url = "https://api.groq.com/openai/v1"
-api_key = "gsk_vPgSKVOaiUJseJwv9wj1WGdyb3FYz4yK0EQ5QntxdCc8oyv4Vhxhf"
+api_key = "ahhhh"
 max_tokens = 4000
 temperature = 0.0
 # Optional second backup
 [llm.backup2]
 model = "llama-3.1-8b-instant"
 base_url = "https://api.groq.com/openai/v1"
-api_key = "gsk_vPgSKVOaiUJseJwv9wj1WGdyb3FYz4yK0EQ5QntxdCc8oyv4Vhxhf"
+api_key = "ahhhh"
 max_tokens = 4000
 temperature = 0.0
 
@@ -44,15 +44,23 @@ temperature = 0.0
 [llm.backup3]
 model = "llama-3.3-70b-versatile"
 base_url = "https://api.groq.com/openai/v1"
-api_key = "gsk_vPgSKVOaiUJseJwv9wj1WGdyb3FYz4yK0EQ5QntxdCc8oyv4Vhxhf"
+api_key = "key..."
 max_tokens = 4000
 temperature = 0.0
 
 [llm.backup4]
 api_type = "openai"
-model = "xiaomi/mimo-v2-flash:free"
+model = "nvidia/nemotron-3-nano-30b-a3b:free"
 base_url = "https://openrouter.ai/api/v1"
-api_key = "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"
+api_key = "key..."
+max_tokens = 4000
+temperature = 0.0
+
+[llm.backup5]
+api_type = "cohere"
+model = "embed-multilingual-v3.0"
+base_url = "https://api.cohere.com/v1/embed"
+api_key = "d.."
 max_tokens = 4000
 temperature = 0.0
 
@@ -64,7 +72,7 @@ temperature = 0.0
 api_type = "openai"
 model = "sourceful/riverflow-v2-fast-preview"
 base_url = "https://openrouter.ai/api/v1"
-api_key = "sk-or-v1-cbeca34b9d3dc45711db1036cc009f7b90be6f1f5de0113a2ebee9a72bd1d035f"
+api_key = "key..."
 max_tokens = 4096
 temperature = 0.0
 
@@ -102,4 +110,4 @@ use_data_analysis_agent = false
 # country = "us"
 [daytona]
 enabled = false
-daytona_api_key = "dtn_dda248bab51a185a0fa4367a8f10fdd1a74cb680e56e526695ac40672d89fa24"
+daytona_api_key = ""
